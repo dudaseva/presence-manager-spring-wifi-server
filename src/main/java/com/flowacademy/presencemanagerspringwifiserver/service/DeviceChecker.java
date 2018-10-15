@@ -19,8 +19,8 @@ import java.util.regex.Pattern;
 public class DeviceChecker {
 
     public void checkIPs(LogsRepository logsRepository) throws IOException, InterruptedException {
-        String[] cmd = { "fping", "-c", "1", "-g", "192.168.0.0/24" };
-        Pattern ip = Pattern.compile("192.168.0.[0-9]+");
+        String[] cmd = { "fping", "-c", "1", "-g", "192.168.5.0/24" };
+        Pattern ip = Pattern.compile("192.168.5.[0-9]+");
 
         Process p = Runtime.getRuntime().exec(cmd);
         p.waitFor();
